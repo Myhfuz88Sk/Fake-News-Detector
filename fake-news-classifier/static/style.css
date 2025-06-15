@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #e3efff, #f6f9ff);
+    margin: 0;
+    padding: 0;
+    color: #1b2a49;
+    animation: fadeIn 1s ease-in;
+}
+
+.section {
+    max-width: 750px;
+    margin: 60px auto;
+    background: #ffffff;
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(27, 42, 73, 0.12);
+    opacity: 0;
+    animation: fadeUp 1s forwards ease;
+}
+
+h1, h2 {
+    color: #1a365d;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+textarea {
+    width: 100%;
+    height: 160px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding: 14px 16px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1.5px solid #b0c4de;
+    background-color: #f9fbff;
+    transition: all 0.3s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #2b6cb0;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.1);
+}
+
+button {
+    padding: 12px 26px;
+    background-color: #2b6cb0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1a365d;
+    transform: scale(1.03);
+}
+
+#result {
+    margin-top: 25px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f0f4fc;
+    border-left: 6px solid #2b6cb0;
+    animation: fadeIn 0.8s ease;
+}
+
+#result:empty {
+    display: none;
+}
+
+/* Animations */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

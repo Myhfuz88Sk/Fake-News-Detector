@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fake News Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div id="home-section" class="section">
+    <h1>📰 Welcome to Fake News Detector</h1>
+    <p>Fake news is a type of propaganda that consists of disinformation or hoaxes spread via traditional news media or online social media. Check if a piece of news is real or fake using our ML-powered detector.</p>
+    <button onclick="showCheckSection()">Check News</button>
+</div>
+
+<div id="check-section" class="section" style="display:none;">
+    <h2>🔍 Enter News Article to Check</h2>
+    <textarea id="articleText" placeholder="Paste news content here..."></textarea>
+    <button onclick="checkNews()">Check Now</button>
+    <div id="result"></div>
+    <button onclick="goBack()">⬅ Back</button>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
